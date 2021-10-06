@@ -1,4 +1,6 @@
 class UserNotifierMailer < ApplicationMailer
+  default from: 'gob@example.com'
+  
   def send_randomness_email(email, thought)
     @email = email
     @thought_image = GiphyService.new.search(thought)
